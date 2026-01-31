@@ -17,3 +17,7 @@ def root():
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+# to add status endpoint
+@app.get("/status")
+def status():
+    return {"status": "running"}
