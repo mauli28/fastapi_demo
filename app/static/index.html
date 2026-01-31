@@ -24,6 +24,7 @@
             border-radius: 16px;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             text-align: center;
+            max-width: 600px;
         }
         h1 {
             font-size: 2.5rem;
@@ -34,6 +35,12 @@
             font-size: 1.2rem;
             margin-bottom: 30px;
         }
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         .btn {
             background: #fff;
             color: #2575fc;
@@ -43,12 +50,22 @@
             font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
-            transition: background 0.3s, color 0.3s;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
             text-decoration: none;
+            display: inline-block;
         }
         .btn:hover {
             background: #2575fc;
             color: #fff;
+            transform: translateY(-2px);
+        }
+        .btn-ml {
+            background: #4CAF50;
+            color: white;
+        }
+        .btn-ml:hover {
+            background: #45a049;
+            color: white;
         }
         @media (max-width: 600px) {
             .container {
@@ -63,8 +80,11 @@
 <body>
     <div class="container">
         <h1>🚀 Welcome to FastAPI Demo!</h1>
-        <p>This is a sample FastAPI project.<br>Explore the API or start building your awesome app.</p>
-        <a href="/docs" class="btn">View API Docs</a>
+        <p>This is a sample FastAPI project with Machine Learning integration.<br>Explore the API or try the ML demo.</p>
+        <div class="btn-group">
+            <a href="/docs" class="btn">View API Docs</a>
+            <a href="/static/ml-demo.html" class="btn btn-ml">🌸 ML Demo</a>
+        </div>
     </div>
 </body>
 </html>
