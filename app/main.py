@@ -11,4 +11,4 @@ app.include_router(router)
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to FastAPI 🚀"}
+    return {"message": "Hello Welcome to FastAPI 🚀"}
