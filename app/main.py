@@ -12,3 +12,8 @@ app.include_router(router)
 @app.get("/")
 def root():
     return {"message": "Hello Welcome to FastAPI 🚀"}
+
+# To add heatlh check endpoint
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
